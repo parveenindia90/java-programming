@@ -18,7 +18,7 @@ public class LinkedListImpl {
 	
 	Node head;
 	
-	public static void main(String args[]){
+	public static void main(String[] args){
 		 
 		 LinkedListImpl list = new LinkedListImpl(); 
 		 
@@ -203,8 +203,8 @@ public class LinkedListImpl {
 			firstNode = firstNode.next;
 			secondNode = secondNode.next.next;
 		}
-		
-		System.out.println(firstNode.data);
+
+        System.out.println(firstNode != null? firstNode.data : "Not present");
 		
 	}
 
@@ -223,7 +223,7 @@ public class LinkedListImpl {
 	}
 
 	private static void insert(LinkedListImpl list, int i) {
-		
+
 		  Node node = new Node(i);
 		  if(list.head == null){
 			  list.head = node;

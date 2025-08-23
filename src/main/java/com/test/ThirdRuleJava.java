@@ -29,7 +29,7 @@ class In{
 public class ThirdRuleJava extends In implements I,J{
 
 	//ThirdRuleJava gives higher priority to class method than interface
-	public static void main(String args[]){
+	public static void main(String[] args){
 		ThirdRuleJava  interfaceTesting = new ThirdRuleJava();
 		interfaceTesting.show();
 		

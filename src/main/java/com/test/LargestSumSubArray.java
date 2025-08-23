@@ -9,11 +9,11 @@ public class LargestSumSubArray {
 	}
 
 	private static void solution(int[] arr) {
-		/*to find largest sum , if we find sum < 0 at any point then again start 
+		/*to find the largest sum , if we find sum < 0 at any point then again start
 		to calculate the sum and  compare it with the previous sum ,
-		if it is max then replace previous sum with curr summ*/
+		if it is max then replace previous sum with curr sum*/
 		
-		int maxSum = arr[0];
+		int maxSum = Integer.MIN_VALUE;
 		int currSum = 0;
 		int start =0;
 		int end =0;
@@ -34,7 +34,7 @@ public class LargestSumSubArray {
 		}
 		
 		System.out.println(maxSum);
-		System.out.println(start +" and "+ end);
+		System.out.println("From array index " + start +" to "+ end);
 		
 		
 	}

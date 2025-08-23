@@ -9,10 +9,10 @@ public class NthMinElement {
 		
 		int[] arr = {9,4,5,7,2,9,3};
 		
-		System.out.println(nthMaxElement(arr,3));
+		System.out.println(nthMinElement(arr,3));
 	}
 
-	private static int nthMaxElement(int[] arr, int n) {
+	private static int nthMinElement(int[] arr, int n) {
 		//priority queue is used to solve these problems. It will be a max heap 
 		PriorityQueue<Integer> queue = new PriorityQueue<>(Collections.reverseOrder());
 		

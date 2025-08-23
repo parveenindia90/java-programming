@@ -5,7 +5,7 @@ import java.util.HashMap;
 public class SubArrayGivenSum {
 	
 	public static void main(String[] args) {
-		int[] arr = {10,15,-5,15,-10,5};
+		int[] arr = {10,15,-5,15,-8,-2};
 		int sum = 5;  //to find
 		
 		solution(arr,sum);
@@ -21,8 +21,7 @@ public class SubArrayGivenSum {
 		for(int i=0;i<n;i++){
 			currSum += arr[i];
 			if(currSum - sum == 0){
-				start = 0;
-				end = i;
+                end = i;
 				break;
 			}
 			

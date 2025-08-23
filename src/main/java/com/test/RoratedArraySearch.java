@@ -20,7 +20,7 @@ public class RoratedArraySearch {
 				return mid;
 			}
 			
-			//left array is sorted
+			//if left array is sorted
 			if(arr[start] < arr[mid]){
 				if(k < arr[mid] && k >= arr[start]){
 					end = mid - 1;
@@ -29,7 +29,7 @@ public class RoratedArraySearch {
 				}
 			}
 			
-			//right array is sorted
+			//if right array is sorted
 			else{
 				if(k > arr[mid] && k <= arr[end]){
 					start = mid + 1;

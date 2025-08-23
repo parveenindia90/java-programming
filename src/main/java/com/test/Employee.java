@@ -1,5 +1,7 @@
 package com.test;
 
+import java.util.Objects;
+
 public class Employee implements Cloneable{
 	
 	private int empId;
@@ -62,9 +64,16 @@ public class Employee implements Cloneable{
 				+ ", region=" + region + ", currency=" + currency + "]";
 	}
 
-	@Override
-	public int hashCode() {
-		return 1;
-	}
-		
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Employee employee = (Employee) o;
+        return empId == employee.empId && Double.compare(empSalary, employee.empSalary) == 0
+                && Objects.equals(empName, employee.empName) && Objects.equals(gender, employee.gender) && Objects.equals(region, employee.region) && Objects.equals(currency, employee.currency);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(empId, empName, empSalary, gender, region, currency);
+    }
 }
