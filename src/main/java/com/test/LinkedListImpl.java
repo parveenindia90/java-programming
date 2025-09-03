@@ -62,11 +62,36 @@ public class LinkedListImpl {
 		 removeElemmendsWithZeroSum(list1);
 		 
 		 deleteMiddleElement(list1);
+
+         removeDuplicatesInSortedList();
 		 
 		 printList(list1);
 	 }
 
-	private static void deleteMiddleElement(LinkedListImpl list) {
+    private static void removeDuplicatesInSortedList() {
+        LinkedListImpl list1 = new LinkedListImpl();
+
+        insert(list1,1);
+        insert(list1,1);
+        insert(list1,2);
+        insert(list1,3);
+        insert(list1,3);
+
+        Node current = list1.head;
+
+        Node prev = list1.head;
+        while (current != null) {
+            while (current.next != null && current.data == current.next.data) {
+                current = current.next;
+            }
+            current = current.next;
+            prev.next = current;
+            prev = current;
+        }
+        printList(list1);
+    }
+
+    private static void deleteMiddleElement(LinkedListImpl list) {
 		
 		Node slow = list.head;
 		Node fast = list.head;

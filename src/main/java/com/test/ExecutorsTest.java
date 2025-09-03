@@ -17,8 +17,7 @@ public class ExecutorsTest {
 				try {
 					Thread.sleep(1000);
 				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
+                    System.out.println("Exception in thread");
 				}
 				System.out.println(k);
 				latch.countDown();
